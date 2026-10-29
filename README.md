@@ -74,26 +74,34 @@ I’m an intermediate student developer exploring **Python, SQL, web development
 
 </div>
 
-## `> contribution_graph --animate`
+## `> ascii --animate`
 
-<!-- The GIF is generated into this profile repository by the setup workflow below. -->
+<!-- Upload assets/terminal-ascii.gif alongside this README. -->
 
 <div align="center">
 
-![Animated contribution snake](https://raw.githubusercontent.com/DevarshP237/DevarshP237/output/github-snake-dark.gif)
+![Animated green ASCII cat](assets/terminal-ascii.gif)
 
 </div>
 
-If the animation hasn’t been generated yet, GitHub’s built-in contribution calendar is still available on my profile. A plain-text terminal fallback:
+Static cat fallback:
 
 ```text
-     .---.       .---.       .---.
-    / .-. \     / .-. \     / .-. \
-   | |   | |   | |   | |   | |   | |
-    \ `-' /     \ `-' /     \ `-' /
-     `---'       `---'       `---'
-   [ learn ] -> [ build ] -> [ repeat ]
+ /\_/\\
+( o.o )
+ > ^ <
+  /|  [ purr ] [ code ] [ repeat ]
 ```
+
+## `> contribution_graph --animate`
+
+The snake animation is generated from the GitHub contribution calendar by the workflow below.
+
+<div align="center">
+
+![Animated contribution graph](https://raw.githubusercontent.com/DevarshP237/DevarshP237/output/github-snake-dark.gif)
+
+</div>
 
 ## `> find me`
 
@@ -108,46 +116,17 @@ If the animation hasn’t been generated yet, GitHub’s built-in contribution c
 
 </div>
 
-<!--
-SETUP — profile README and animated ASCII contribution snake
+## Setup
 
-1. Create a public repository named exactly `DevarshP237` and upload this file
-   as `README.md` at the repository root.
-2. In that repository, create `.github/workflows/snake.yml` with the workflow
-   shown below. It generates `github-snake-dark.gif` in the `output` branch.
-3. In the repository settings, open Actions > General > Workflow permissions
-   and allow read and write permissions. Save the setting.
-4. Run the workflow once from the Actions tab. The animated image should then
-   appear above; later runs update it automatically each day.
-5. Replace the project rows and social placeholders with your real information.
+1. Create a public repository named exactly `DevarshP237`.
+2. Upload all contents from this download, preserving the `assets` and
+   `.github/workflows` folders. The green ASCII cat works immediately.
+3. In repository Settings > Actions > General > Workflow permissions, allow
+   read and write permissions, then save.
+4. Run “Update contribution snake” once from the Actions tab. The contribution
+   snake will appear after it runs and refresh automatically each day.
+5. Replace the project rows and social placeholders with real links/details.
 
-Workflow file: .github/workflows/snake.yml
-
-name: Update contribution snake
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "17 0 * * *"
-
-permissions:
-  contents: write
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate contribution snake
-        uses: Platane/snk@v3
-        with:
-          github_user_name: DevarshP237
-          outputs: |
-            dist/github-snake-dark.gif?palette=github-dark&color_snake=39d353
-      - name: Publish animation
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+The workflow is included at `.github/workflows/snake.yml`; it publishes the
+contribution animation to the `output` branch.
 -->
